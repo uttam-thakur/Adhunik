@@ -1,0 +1,139 @@
+/* ========== NAVBAR BASE ========== */
+.navbar {
+  width: 100%;
+  background: #fff;
+  padding: 12px 25px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+/* Desktop Menu */
+nav ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  color: #333;
+}
+
+/* Dropdown */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background: #fff;
+  top: 40px;
+  left: 0;
+  width: 220px;
+  border: 1px solid #ddd;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
+}
+
+/* ========== MOBILE STYLES ========== */
+.menu-icon {
+  display: none;
+  font-size: 28px;
+  cursor: pointer;
+}
+
+/* Hidden by default on mobile */
+#navMenu {
+  display: flex;
+}
+
+.close-btn {
+  display: none;
+}
+/* MOBILE NAV FIX */
+@media (max-width: 768px) {
+
+  .menu-icon {
+    display: block;
+    font-size: 28px;
+    cursor: pointer;
+    z-index: 3000;
+  }
+
+  /* SLIDE-IN PANEL */
+  #navMenu {
+    position: fixed;
+    top: 0;
+    left: -80%; /* hidden by default */
+    width: 80%;
+    height: 100vh;
+    background: #ffffff;
+    transition: left 0.3s ease-in-out;
+    padding-top: 60px;
+    box-shadow: 2px 0px 10px rgba(0,0,0,0.3);
+    z-index: 2000;
+  }
+
+  #navMenu.show-menu {
+    left: 0; /* slide in */
+  }
+
+  /* CLOSE BUTTON */
+   .close-btn {
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 3000;
+  }
+
+  /* MENU ITEMS – FIXED */
+  nav ul {
+    display: flex !important;  /* FORCE SHOW */
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  nav ul li a {
+    font-size: 18px;
+    color: #333 !important;  /* FIX invisible text */
+    padding: 10px 0;
+    display: block;
+  }
+
+  /* Dropdown */
+  .dropdown-menu {
+    display: none;
+    background: #f1f1f1;
+    padding: 10px;
+  }
+
+  .dropdown.open .dropdown-menu {
+    display: block;
+  }
+}

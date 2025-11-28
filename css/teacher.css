@@ -1,0 +1,214 @@
+/* .teacher-card {
+  overflow: hidden;
+  border: none;
+  position: relative;
+}
+
+.teacher-card .img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.teacher-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.teacher-card:hover img {
+  transform: scale(1.05);
+}
+
+.hover-info {
+  position: absolute;
+  bottom: -40%;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0));
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.teacher-card:hover .hover-info {
+  bottom: 0;
+  opacity: 1;
+}
+
+.hover-info h5 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.socials {
+  margin-top: 8px;
+  display: flex;
+  gap: 12px;
+}
+
+.socials img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+  transition: 0.3s;
+}
+
+.socials img:hover {
+  transform: scale(1.2);
+} */
+
+
+
+.teacher-card {
+  overflow: hidden;
+  border: none;
+  position: relative;
+}
+
+.teacher-card .img-wrapper {
+  position: relative;
+  overflow: hidden;
+}
+
+.teacher-card img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.teacher-card:hover img {
+  transform: scale(1.05);
+}
+
+.hover-info {
+  position: absolute;
+  bottom: -40%;
+  left: 0;
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(to top, rgba(0,0,0,0.75), rgba(0,0,0,0));
+  color: #fff;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.teacher-card:hover .hover-info {
+  bottom: 0;
+  opacity: 1;
+}
+
+.hover-info h5 {
+  margin: 0;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.socials {
+  margin-top: 8px;
+  display: flex;
+  gap: 12px;
+}
+
+.socials img {
+  width: 22px;
+  height: 22px;
+  filter: brightness(0) invert(1);
+  transition: 0.3s;
+}
+
+.socials img:hover {
+  transform: scale(1.2);
+}
+
+
+/* ------------------------------------------
+    RESPONSIVE BREAKPOINTS
+   ------------------------------------------ */
+
+/* Tablets (768px–991px) */
+@media (max-width: 991px) {
+
+    
+
+  .teacher-card:hover img {
+    transform: scale(1.03);
+  }
+
+  .hover-info {
+    height: 45%;
+    padding: 12px;
+  }
+
+  .hover-info h5 {
+    font-size: 16px;
+  }
+
+  .socials img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+/* Mobile (576px–767px) */
+/* Mobile (576px–767px) */
+@media (max-width: 767px) {
+
+  .hover-info {
+    height: 55%;       /* More vertical space */
+    padding: 12px;     /* More breathing room */
+    bottom: -55%;
+  }
+
+  .hover-info h5 {
+    font-size: 16px;
+  }
+
+  .socials {
+    gap: 12px;
+    margin-top: 10px;
+  }
+
+  .socials img {
+    width: 22px;       /* Bigger icons */
+    height: 22px;
+    filter: brightness(0) invert(1);
+  }
+
+  .teacher-card:hover img {
+    transform: scale(1.02);
+  }
+}
+
+/* Small Mobile (up to 575px) */
+@media (max-width: 575px) {
+
+  .hover-info {
+    height: 60%;        /* More height to fit icons */
+    padding: 14px;
+    bottom: -60%;
+  }
+
+  .hover-info h5 {
+    font-size: 17px;
+  }
+
+  .socials img {
+    width: 24px;        /* Visible even on tiny screens */
+    height: 24px;
+  }
+
+  .teacher-card:hover img {
+    transform: scale(1.01);
+  }
+}
+

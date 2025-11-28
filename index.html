@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aadhunik Group of Institute</title>
+  <link rel="stylesheet" href="./css/home.css" />
+  <link rel="stylesheet" href="./css/nav.css" />
+</head>
+<body>
+  <!-- NAVBAR -->
+<!-- NAVBAR -->
+<header class="navbar">
+  <div class="logo">Aadhunik Group of Institute</div>
+
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+  <nav id="navMenu">
+    <div class="close-btn" onclick="toggleMenu()">×</div>
+
+    <ul>
+      <li><a href="index.html">Home</a></li>
+
+      <li class="dropdown">
+        <a href="#">Courses ▾</a>
+        <div class="dropdown-menu">
+          <a href="kids.html">Kid Classes (Pre-Nursery to 4)</a>
+          <a href="tutorials.html">Tutorials (1–10, JEE/NEET, Diploma, B.Tech, GATE)</a>
+        </div>
+      </li>
+
+      <li><a href="admission.html">Admission</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+
+
+
+  <!-- HERO SECTION -->
+  <section class="hero" id="home">
+    <div class="hero-text">
+      <h1>Welcome to Aadhunik Group of Institute</h1>
+      <p>From early learning to advanced education – nurturing every mind, every step.</p>
+      <a href="#courses" class="btn">Explore Courses</a>
+    </div>
+  </section>
+
+  <!-- KIDS + TUTORIAL INTRO -->
+  <section class="sections">
+    <div class="card kids">
+      <h2>Aadhunik Kid Class</h2>
+      <p>Pre-Nursery to Class 4. Joyful learning, caring teachers, and activity-based education.</p>
+      <a href="kids.html" class="btn-secondary">Learn More</a>
+    </div>
+
+    <div class="card tutorials">
+      <h2>Aadhunik Tutorials</h2>
+      <p>Classes 1–10 (WBBSE/CBSE), Class 11–12 Science, JEE/NEET (Physics), Diploma, B.Tech & GATE.</p>
+      <a href="#tutorials" class="btn-secondary">Learn More</a>
+    </div>
+  </section>
+
+  <!-- WHY CHOOSE US -->
+  <section class="why-us" id="about">
+    <h2>Why Choose Us?</h2>
+    <div class="features">
+      <div class="feature-box">Experienced Faculty</div>
+      <div class="feature-box">Modern Learning Environment</div>
+      <div class="feature-box">Regular Tests & Tracking</div>
+      <div class="feature-box">Clean & Safe Campus</div>
+    </div>
+  </section>
+
+  <!-- CONTACT PREVIEW -->
+  <section class="contact-preview" id="contact">
+    <h2>Get in Touch</h2>
+    <p>Have questions? We're here to help you begin your journey.</p>
+    <a href="contact.html" class="btn">Admission Form</a>
+  </section>
+<script>
+  function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("show-menu");
+  }
+
+  // Dropdown click open/close
+  document.querySelectorAll(".dropdown > a").forEach(item => {
+    item.addEventListener("click", (e) => {
+      e.preventDefault();
+      item.parentElement.classList.toggle("open");
+    });
+  });
+</script>
+
+
+</body>
+
+
+</html>
