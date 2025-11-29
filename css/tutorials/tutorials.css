@@ -1,0 +1,119 @@
+/* ============================
+   AADHUNIK TUTORIALS PAGE CSS
+   ============================ */
+
+.tutorial-section {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 1100px;
+  margin: auto;
+}
+
+.tutorial-section h1 {
+  font-size: 2.4rem;
+  margin-bottom: 12px;
+  color: #1a1a1a;
+  font-weight: 700;
+}
+
+.tutorial-section p {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 750px;
+  margin: auto;
+}
+
+/* ====== CARDS GRID ====== */
+.tutorial-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+  margin-top: 45px;
+  padding: 0 15px;
+}
+
+/* ====== CARD DESIGN ====== */
+.tutorial-card {
+  padding: 28px;
+  border-radius: 14px;
+  background: #f3f6ff;
+  border: 1px solid #e4e8ff;
+  transition: 0.35s ease;
+  box-shadow: 0px 4px 10px rgba(0,0,0,0.04);
+}
+
+.tutorial-card:hover {
+  background: #dfe8ff;
+  transform: translateY(-6px);
+  box-shadow: 0px 10px 20px rgba(0,0,0,0.12);
+}
+
+.tutorial-card h3 {
+  margin-bottom: 12px;
+  font-size: 1.4rem;
+  color: #223;
+}
+
+.tutorial-card p {
+  margin-bottom: 15px;
+  font-size: 1rem;
+  color: #444;
+}
+
+/* ====== BUTTON ====== */
+.btn-small {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 9px 18px;
+  background: #3452ff;
+  color: #fff;
+  border-radius: 6px;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: 0.3s ease;
+}
+
+.btn-small:hover {
+  background: #1c37d7;
+}
+
+/* ========= RESPONSIVE ========= */
+@media (max-width: 768px) {
+  
+  .tutorial-section h1 {
+    font-size: 2rem;
+  }
+
+  .tutorial-section p {
+    font-size: 1rem;
+  }
+
+  .tutorial-card {
+    padding: 24px;
+  }
+
+  .btn-small {
+    padding: 8px 16px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .tutorial-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .tutorial-cards {
+    gap: 18px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
