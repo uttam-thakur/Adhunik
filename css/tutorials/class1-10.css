@@ -1,0 +1,239 @@
+/* *{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  background: #f8f9fc;
+  padding-bottom: 50px;
+  overflow-x: hidden;
+}
+
+.page-container{
+  width: 90%;
+  max-width: 1100px;
+  margin: auto;
+  padding-top: 50px;
+}
+
+.hero-box{
+  background: linear-gradient(135deg, #005bea, #00c6fb);
+  color: white;
+  padding: 50px 30px;
+  border-radius: 12px;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.hero-box h1{
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.hero-box p{
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.syllabus{
+  background: #fff;
+  padding: 30px;
+  margin-top: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.syllabus h2{
+  margin-bottom: 20px;
+  font-size: 26px;
+  color: #222;
+}
+
+.topic{
+  background: #eef4ff;
+  padding: 15px 20px;
+  border-left: 5px solid #005bea;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.topic h3{
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+.pdf-section{
+  margin-top: 40px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+}
+
+.pdf-section h2{
+  margin-bottom: 20px;
+}
+
+.material-item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f0f5ff;
+  padding: 14px 20px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.material-item span{
+  font-size: 17px;
+}
+
+.download-btn{
+  padding: 8px 15px;
+  border-radius: 6px;
+  background: #005bea;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+@media(max-width: 600px){
+  .hero-box h1{
+    font-size: 28px;
+  }
+  .topic{
+    padding: 12px 15px;
+  }
+} */
+
+
+/* new css */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background: #f8fafc;
+  overflow-x: hidden;
+}
+
+
+/* HERO SECTION */
+.hero {
+  width: 100%;
+  background: linear-gradient(135deg, #0066ff, #00bbff);
+  padding: 60px 20px;
+  color: #fff;
+  text-align: center;
+  margin-top: 0px;
+}
+
+
+.hero h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.hero p {
+  font-size: 17px;
+  margin-top: 10px;
+  opacity: 0.9;
+}
+
+/* CONTENT SECTION */
+.content-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 6%;
+  gap: 40px;
+}
+
+/* LEFT SIDE */
+.left-content {
+  width: 60%;
+}
+
+.left-content h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.subject-card {
+  background: #fff;
+  padding: 18px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  box-shadow: 0 0 0 transparent;
+  transition: 0.3s ease;
+  border: 1px solid #e3e8ef;
+}
+
+.subject-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.25);
+}
+
+/* RIGHT SIDE */
+.right-content {
+  width: 35%;
+}
+
+.right-content h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.pdf-card {
+  background: #fff;
+  padding: 18px 20px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #e3e8ef;
+  transition: 0.3s ease;
+}
+
+.pdf-card:hover {
+  box-shadow: 0px 4px 15px rgba(0, 123, 255, 0.25);
+  transform: translateY(-3px);
+}
+
+.btn-download {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 14px;
+  background: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 6px;
+  font-size: 14px;
+  transition: 0.3s ease;
+}
+
+.btn-download:hover {
+  background: #005fcc;
+}
+
+/* Upload Box */
+.upload-box {
+  text-align: center;
+}
+
+.upload-box input {
+  margin-top: 10px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+  .content-section {
+    flex-direction: column;
+  }
+
+  .left-content, .right-content {
+    width: 100%;
+  }
+}

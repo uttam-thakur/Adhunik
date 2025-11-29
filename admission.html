@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admission Form - Aadhunik Group of Institute</title>
+  <link rel="stylesheet" href="./css/admission.css" />
+</head>
+
+<body>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Begin Your Child’s Learning Journey</h1>
+      <p>
+        Admissions are now open for Kid Classes, Tutorials (1–10), Science (11–12), 
+        JEE/NEET, Diploma, B.Tech & GATE coaching.  
+      </p>
+      <p class="highlight">
+        A nurturing environment. Experienced teachers. Modern learning approach.
+      </p>
+    </div>
+  </section>
+
+  <!-- DOCUMENT SECTION -->
+  <section class="documents">
+    <h2>Documents Required</h2>
+      <div class="features">
+      <div class="feature-card">Birth Certificate of the Student</div>
+      <div class="feature-card">Passport-size Photograph (2)</div>
+      <div class="feature-card">Aadhaar Card of Student & Parent</div>
+      <div class="feature-card">Last School Report Card (if applicable)</div>
+      <div class="feature-card">Address Proof</div>
+    </div>
+
+  </section>
+  
+  <!-- MAIN FORM AREA -->
+  <section class="admission-section">
+    <div class="form-container">
+
+      <h2>Admission Form</h2>
+      <p class="subtitle">
+        Please fill all the details correctly. Our team will contact you shortly.
+      </p>
+
+      <form>
+
+        <div class="two-grid">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter student's name" required />
+          </div>
+
+          <div class="form-group">
+            <label>Date of Birth</label>
+            <input type="date" required />
+          </div>
+        </div>
+
+        <div class="two-grid">
+          <div class="form-group">
+            <label>Gender</label>
+            <select required>
+              <option value="">Choose gender</option>
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label>Class Applying For</label>
+            <select required>
+              <option value="">Select class</option>
+              <option>Pre-Nursery</option>
+              <option>Nursery</option>
+              <option>KG</option>
+              <option>Class 1–10</option>
+              <option>Class 11–12 Science</option>
+              <option>JEE / NEET</option>
+              <option>Diploma</option>
+              <option>B.Tech</option>
+              <option>GATE</option>
+            </select>
+          </div>
+        </div>
+
+        <h3>Parent / Guardian Details</h3>
+
+        <div class="two-grid">
+          <div class="form-group">
+            <label>Parent Name</label>
+            <input type="text" placeholder="Enter parent/guardian name" required />
+          </div>
+
+          <div class="form-group">
+            <label>Mobile Number</label>
+            <input type="tel" placeholder="Enter mobile number" required />
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="Enter email" />
+        </div>
+
+        <div class="form-group">
+          <label>Address</label>
+          <textarea rows="3" placeholder="Enter complete address" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">Submit Application</button>
+
+      </form>
+
+    </div>
+  </section>
+
+</body>
+</html>

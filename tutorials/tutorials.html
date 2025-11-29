@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aadhunik Tutorials</title>
+
+  <!-- External CSS -->
+  <!-- <link rel="stylesheet" href="./css/home.css" /> -->
+  <link rel="stylesheet" href="../css/tutorials/tutorials.css" />
+  <link rel="stylesheet" href="../css/nav.css" />
+
+</head>
+<body>
+
+<!-- Navbar -->
+ 
+ <header class="navbar">
+  <div class="logo">Aadhunik Group of Institute</div>
+
+  <div class="menu-icon" onclick="toggleMenu()">☰</div>
+
+  <nav id="navMenu">
+    <div class="close-btn" onclick="toggleMenu()">×</div>
+
+    <ul>
+      <li><a href="../index.html">Home</a></li>
+
+      <li class="dropdown">
+        <a href="#">Courses ▾</a>
+        <div class="dropdown-menu">
+          <a href="../kids.html">Kid Classes</a>
+          <a href="./tutorials/tutorials.html">Tutorials </a>
+        </div>
+      </li>
+
+<li><a href="../admission.html" target="_blank" rel="noopener noreferrer">Admission</a></li>
+      <li><a href="../contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<section class="tutorial-section">
+  <h1>Aadhunik Tutorials</h1>
+  <p>Guided education for Classes 1 to Engineering with expert faculty and structured learning paths.</p>
+
+  <div class="tutorial-cards">
+
+    <div class="tutorial-card">
+      <h3>Classes 1 – 10</h3>
+      <p>WBBSE & CBSE syllabus with strong fundamentals.</p>
+      <a href="class1-10.html" class="btn-small">View Details</a>
+    </div>
+
+    <div class="tutorial-card">
+      <h3>Class 11–12 Science</h3>
+      <p>Physics, Chemistry, Mathematics, Biology coaching.</p>
+      <a href="class11-12.html" class="btn-small">View Details</a>
+    </div>
+
+    <div class="tutorial-card">
+      <h3>JEE / NEET</h3>
+      <p>Crash courses, full courses & foundation programs.</p>
+      <a href="jee-neet.html" class="btn-small">View Details</a>
+    </div>
+
+    <div class="tutorial-card">
+      <h3>Diploma / B.Tech</h3>
+      <p>Engineering semester-wise support & problem-solving.</p>
+      <a href="diploma-btech.html" class="btn-small">View Details</a>
+    </div>
+
+    <div class="tutorial-card">
+      <h3>GATE Coaching</h3>
+      <p>Concept-based preparation for technical excellence.</p>
+      <a href="gate.html" class="btn-small">View Details</a>
+    </div>
+
+  </div>
+</section>
+
+<script>
+  function toggleMenu() {
+    document.getElementById("navMenu").classList.toggle("show-menu");
+  }
+</script>
+
+</body>
+</html>
