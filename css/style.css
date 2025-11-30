@@ -4,6 +4,28 @@ body {
   color: #48494a;
   background-image: url(../images/body-bg.jpg);
 }
+.top-bar{
+
+  background-color: rgb(6, 59, 59);
+  color: #ffffff;
+  height: auto;
+  padding: 10px 20px;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.top-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
 
 .layout_padding {
   padding: 75px 0;
@@ -465,7 +487,10 @@ a:focus {
 /* footer section*/
 
 .footer_section {
-  background-color: #082465;
+  /* background-color: #082465; */
+  background-color: rgb(6, 59, 59);
+
+   
   padding: 20px 0;
   font-family: "Roboto", sans-serif;
 }
