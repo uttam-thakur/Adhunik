@@ -5,6 +5,29 @@
   padding: 0;
   box-sizing: border-box;
 }
+.top-bar {
+  background-color: rgb(6, 59, 59);
+  color: #ffffff;
+  height: auto;
+  padding: 10px 20px;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+
+  font-size: 14px;
+  flex-wrap: wrap;
+}
+
+.top-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+}
+
+
 
 .navbar {
   width: 100%;
@@ -87,6 +110,13 @@ nav ul li a {
 }
 /* MOBILE NAV FIX */
 @media (max-width: 768px) {
+
+   .top-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    padding: 12px 10px;
+  }
 
   .menu-icon {
     display: block;
