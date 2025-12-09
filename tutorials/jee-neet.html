@@ -75,7 +75,7 @@
   <div class="right-content">
     <h2>Study Materials / PDFs</h2>
 
-    <div class="pdf-card">
+    <!-- <div class="pdf-card">
       <h4>JEE Advanced Maths Problems</h4>
       <a class="btn-download" href="#" target="_blank">Download</a>
     </div>
@@ -83,10 +83,59 @@
     <div class="pdf-card">
       <h4>NEET Biology NCERT Handwritten Notes</h4>
       <a class="btn-download" href="#" target="_blank">Download</a>
-    </div>
+    </div> -->
+
+
+     <div id="pdfList">Loading PDFs...</div>
+
+  <script>
+    const folderID = "1TGTP6qFW_Xzo5mc_Ii8uUMKu5CeJ8TIY";   // Replace this
+    const apiKey = "AIzaSyCttwDMpxqykE8Q_aKcALIatOZ_zcGyYeY";                    // Replace this
+
+    const url =
+      `https://www.googleapis.com/drive/v3/files?q='${folderID}'+in+parents&key=${apiKey}&fields=files(id,name,mimeType)`;
+
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        if (!data.files) {
+          document.getElementById("pdfList").innerHTML = "No PDFs found.";
+          return;
+        }
+
+        let html = "<ul>";
+
+        data.files.forEach(file => {
+          if (file.mimeType === "application/pdf") {
+            html += `
+              <li>
+                <a href="https://drive.google.com/uc?export=download&id=${file.id}" 
+                   target="_blank">
+                  📄 ${file.name}
+                </a>
+              </li>
+            `;
+          }
+        });
+
+        html += "</ul>";
+
+        document.getElementById("pdfList").innerHTML = html;
+      })
+      .catch(err => {
+        console.error(err);
+        document.getElementById("pdfList").innerHTML = "Failed to load PDFs.";
+      });
+  </script>
+
   </div>
 
 </section>
 </body>
 </html>
 
+
+
+<!-- api key - AIzaSyCttwDMpxqykE8Q_aKcALIatOZ_zcGyYeY -->
+ <!-- https://drive.google.com/drive/u/0/folders/1TGTP6qFW_Xzo5mc_Ii8uUMKu5CeJ8TIY -->
+  <!-- 1TGTP6qFW_Xzo5mc_Ii8uUMKu5CeJ8TIY -->

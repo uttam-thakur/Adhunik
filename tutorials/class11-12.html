@@ -74,7 +74,7 @@
   <div class="right-content">
     <h2>Study Materials / PDFs</h2>
 
-    <div class="pdf-card">
+    <!-- <div class="pdf-card">
       <h4>Physics Notes – Motion</h4>
       <a class="btn-download" href="#" target="_blank">Download</a>
     </div>
@@ -87,7 +87,52 @@
     <div class="pdf-card">
       <h4>Maths Formula Sheet</h4>
       <a class="btn-download" href="#" target="_blank">Download</a>
-    </div>
+    </div> -->
+
+
+      <div id="pdfList">Loading PDFs...</div>
+
+  <script>
+    const folderID = "16G4-KI99LWMcRZaT909dbYrHsdY7oEz2";   // Replace this
+    const apiKey = "AIzaSyDWXzyJQI31Q3hzGt_7O3VtcHV_-ctv4VI";                    // Replace this
+
+    const url =
+      `https://www.googleapis.com/drive/v3/files?q='${folderID}'+in+parents&key=${apiKey}&fields=files(id,name,mimeType)`;
+
+    fetch(url)
+      .then(res => res.json())
+      .then(data => {
+        if (!data.files) {
+          document.getElementById("pdfList").innerHTML = "No PDFs found.";
+          return;
+        }
+
+        let html = "<ul>";
+
+        data.files.forEach(file => {
+          if (file.mimeType === "application/pdf") {
+            html += `
+              <li>
+                <a href="https://drive.google.com/uc?export=download&id=${file.id}" 
+                   target="_blank">
+                  📄 ${file.name}
+                </a>
+              </li>
+            `;
+          }
+        });
+
+        html += "</ul>";
+
+        document.getElementById("pdfList").innerHTML = html;
+      })
+      .catch(err => {
+        console.error(err);
+        document.getElementById("pdfList").innerHTML = "Failed to load PDFs.";
+      });
+  </script>
+
+
 
   </div>
 
@@ -95,3 +140,8 @@
 
 </body>
 </html>
+
+
+<!-- https://drive.google.com/drive/u/0/folders/16G4-KI99LWMcRZaT909dbYrHsdY7oEz2 -->
+
+<!-- 16G4-KI99LWMcRZaT909dbYrHsdY7oEz2 -->
