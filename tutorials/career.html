@@ -13,83 +13,93 @@
 
   <style>
     body {
-      font-family: Arial, sans-serif;
-      padding: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
       margin: 0;
+      background: linear-gradient(135deg, #e8f0ff, #f8faff);
     }
 
     .career-section {
-      padding: 60px 20px;
-      max-width: 900px;
+      padding: 80px 20px;
+      max-width: 850px;
       margin: auto;
       text-align: center;
     }
 
+    .career-section h1 {
+      font-size: 36px;
+      font-weight: 700;
+      color: #2b2b2b;
+      margin-bottom: 10px;
+    }
+
+    .career-section p {
+      color: #555;
+      font-size: 18px;
+      margin-bottom: 30px;
+    }
+
     .career-box {
-      background: #f9f9f9;
-      padding: 30px;
-      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+      padding: 40px;
+      border-radius: 18px;
       margin-top: 20px;
-      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      transition: 0.3s ease;
+    }
+
+    .career-box:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
     }
 
     .career-box h2 {
-      margin-bottom: 10px;
       font-size: 28px;
+      font-weight: 600;
+      color: #1b4db7;
+      margin-bottom: 10px;
     }
 
     .career-box p {
-      font-size: 18px;
-      margin-bottom: 20px;
-    }
-
-    .career-email {
-      font-size: 20px;
-      font-weight: bold;
-      color: #007bff;
+      font-size: 17px;
+      color: #444;
     }
 
     .career-email a {
-      color: #007bff;
+      display: inline-block;
+      font-size: 20px;
+      font-weight: 600;
+      margin-top: 10px;
+      padding: 10px 20px;
+      color: white;
+      background: #1b4db7;
+      border-radius: 8px;
       text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .career-email a:hover {
+      background: #0d3a8c;
+    }
+
+    @media (max-width: 600px) {
+      .career-section h1 {
+        font-size: 30px;
+      }
+
+      .career-box {
+        padding: 25px;
+      }
     }
   </style>
-
 </head>
 
 <body>
 
-  <!-- Navbar -->
-  <!-- <header class="navbar">
-    <div class="logo">Adhunik Group of Institute</div>
-
-    <div class="menu-icon" onclick="toggleMenu()">☰</div>
-
-    <nav id="navMenu">
-      <div class="close-btn" onclick="toggleMenu()">×</div>
-
-      <ul>
-        <li><a href="./index.html">Home</a></li>
-
-        <li class="dropdown">
-          <a href="#">Courses ▾</a>
-          <div class="dropdown-menu">
-            <a href="./kids.html">Kid Classes</a>
-            <a href="./tutorials/tutorials.html">Tutorials</a>
-          </div>
-        </li>
-
-        <li><a href="./admission.html">Admission</a></li>
-        <li><a href="./contact.html">Contact</a></li>
-        <li><a href="./career.html" class="active">Career</a></li>
-      </ul>
-    </nav>
-  </header> -->
-
   <!-- Career Section -->
   <section class="career-section">
     <h1>Career Opportunities</h1>
-    <p>Join the Aadhunik Group of Institute and become a part of our growing educational family.</p>
+    <p>Join the Aadhunik Group of Institute and be a part of our growing educational family.</p>
 
     <div class="career-box">
       <h2>We Are Hiring!</h2>
@@ -98,10 +108,14 @@
       <p>Send your updated CV to:</p>
 
       <div class="career-email">
-        <a href="mailto:info@yourschool.com">info@yourschool.com</a>
+<a href="mailto:info@yourschool.com" >
+          📧 info@yourschool.com
+        </a>
       </div>
 
-      <p style="margin-top: 10px;">Subject Line: <b>Application for Teaching Position</b></p>
+      <p style="margin-top: 20px; font-size: 16px;">
+        <b>Subject Line:</b> Application for Teaching Position
+      </p>
 
       <p>You may attach your CV (PDF/Word). Our HR team will contact you if shortlisted.</p>
     </div>
