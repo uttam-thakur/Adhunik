@@ -1,0 +1,50 @@
+/* .pantamind_section {
+  width: 70%;
+  margin: 40px 0;
+  
+}
+
+.pantamind_img {
+  width: 100%;
+  max-width: 1200px;   
+  height: auto;
+  display: block;
+  margin: 0px 220px;
+  border-radius: 10px;
+}
+
+ */
+
+
+ .pantamind_section {
+  width: 80%;
+  margin: 40px auto;
+  padding: 0 15px; /* mobile padding */
+  display: flex;
+  justify-content: center;
+}
+
+.pantamind_img {
+  width: 100%;
+  max-width: 1200px;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .pantamind_section {
+    width: 100%;
+    margin: 20px auto;
+    padding: 0 10px;
+  }
+
+  .pantamind_img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin: 0 auto;
+    border-radius: 6px;
+  }
+}

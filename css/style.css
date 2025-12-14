@@ -21,41 +21,47 @@ body {
   textarea::-webkit-input-placeholder { color: #000 !important; }
   input:-ms-input-placeholder { color: #000 !important; }
   textarea:-ms-input-placeholder { color: #000 !important; }
+
+/* Modal backdrop */
 .facility-modal {
-  display: none;
+  display: none; /* show using JS */
   position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.7);
-  backdrop-filter: blur(4px);
-  justify-content: center;
-  align-items: center;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
   z-index: 9999;
-}
 
-.modal-content {
-  background: #fff;
-  padding: 20px;
-  width: 90%;
-  max-width: 480px;
-  border-radius: 12px;
-  text-align: center;
-  position: relative;
-  animation: fadeIn 0.3s ease;
-}
-
-.modal-slider {
-  position: relative;
   display: flex;
   align-items: center;
+  justify-content: center;
+    overflow-x: hidden;
+
 }
 
-.modal-slider img {
-  width: 100%;
-  border-radius: 10px;
+/* Modal box */
+.modal-content {
+  background: #fff;
+    overflow-x: hidden;
+
+  width: 50%;
+  /* max-width: 600px;   desktop size */
+  /* max-height: 50%; */
+  border-radius: 12px;
+  padding: 20px;
+  position: relative;
+  overflow-y: auto;
 }
+.modal-slider {
+  width: 100%;
+
+}
+/* Slider image */
+.modal-slider img {
+  width: 90%;
+  height: 500px;
+  border-radius: 10px;
+  margin-left: 40px;
+}
+
 
 .prev-btn,
 .next-btn {
@@ -70,7 +76,7 @@ body {
   user-select: none;
 }
 
-.prev-btn { left: -10px; }
+.prev-btn { left: 5px; }
 .next-btn { right: -10px; }
 
 .close-btn {
@@ -600,4 +606,38 @@ a:focus {
           overflow-x: hidden !important;
 
   }
+
+  .modal-slider img {
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+  margin-left: 22px;
+}
+
+
+.prev-btn,
+.next-btn {
+  position: absolute;
+  top: 50%;
+  font-size: 32px;
+  font-weight: bold;
+  color: #222;
+  cursor: pointer;
+  transform: translateY(-50%);
+  padding: 5px 10px;
+  user-select: none;
+}
+
+.prev-btn { left: 5px; }
+.next-btn { right: -10px; }
+
+.close-btn {
+  position: absolute;
+  top: -5px;
+  right: 1px;
+  font-size: 26px;
+  cursor: pointer;
+  color: #333;
+}
+
 }
