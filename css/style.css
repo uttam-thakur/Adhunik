@@ -5,12 +5,14 @@
 
 }
 
+
 body {
   font-family: 'Poppins', sans-serif;
 
   color: #48494a;
   background-image: url(../images/body-bg.jpg);
 }
+
 
 /* Add here */
   ::placeholder {
@@ -304,8 +306,26 @@ a:focus {
   width: 45%;
 }
 
+.slider {
+  position: relative;
+}
+
+.slide {
+  position: absolute;
+  width: 100%;
+  opacity: 0;
+  transition: opacity 0.8s ease-in-out;
+}
+
+.slide.active {
+  opacity: 1;
+  position: relative;
+}
+
 .hero_img-container {
   width: 55%;
+  position: relative;
+  overflow: hidden;
 }
 
 .hero_detail-box {
@@ -336,6 +356,28 @@ a:focus {
 }
 
 /* about section */
+.animate-img {
+  animation: slowInOut 6s ease-in-out infinite;
+}
+
+@keyframes slowInOut {
+  0% {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+  25% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  75% {
+    opacity: 1;
+    transform: scale(1);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scale(0.95);
+  }
+}
 
 /* teacher container */
 .teacher_section .card {
@@ -349,6 +391,10 @@ a:focus {
 }
 
 /* end teacher container */
+
+
+
+
 
 /* vehicle section */
 .vehicle_img-box {

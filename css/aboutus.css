@@ -1,11 +1,26 @@
-.about_content p {
-  font-size: 16px;
-  line-height: 1.7;
-  color: #444;
+
+/*** About ***/
+.about-img {
+    position: relative;
 }
 
-.about_img-box img {
-  /* box-shadow: 0 8px 20px rgba(0,0,0,0.15); */
+.about-img::before,
+.about-img::after {
+    position: absolute;
+    content: "";
+    width: 33%;
+    height: 80px;
+    background: var(--bs-white);
+}
+
+.about-img::before {
+    top: 0px;
+    left: 0px;
+}
+
+.about-img::after {
+    right: 0px;
+    bottom: 0px;
 }
 @media (max-width: 768px) {
 .about_content{
