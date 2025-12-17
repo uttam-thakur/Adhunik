@@ -121,7 +121,7 @@ body {
 }
 
 .layout_padding {
-  padding: 75px 0;
+  padding: 60px 0;
 }
 
 .layout_padding2 {
@@ -359,6 +359,17 @@ a:focus {
 .animate-img {
   animation: slowInOut 6s ease-in-out infinite;
 }
+.about-title {
+  font-size: 38px;
+  font-weight: 700;
+  color: #1f2937; /* dark slate */
+  letter-spacing: 1px;
+}
+
+.about-title span {
+  color: #f59e0b; /* warm school-friendly yellow */
+}
+
 
 @keyframes slowInOut {
   0% {
@@ -426,7 +437,7 @@ a:focus {
 }
 
 /* Facilities Section */
-.facilities_section { padding:80px 40px; background:#f9fbff; }
+.facilities_section { padding:0px 40px; background:#f9fbff; }
 .facility-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:30px; margin-top:40px; }
 .facility-card { background:#fff; padding:20px; border-radius:10px; box-shadow:0 3px 10px rgba(0,0,0,0.1); text-align:center; }
 .facility-card img { width:100%; max-width:180px; margin:auto; display:block; }
