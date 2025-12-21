@@ -95,13 +95,64 @@ body {
   to   { transform: scale(1); opacity: 1; }
 }
 
+/* social media */
+.social-vertical {
+  position: fixed;
+  right: 0;
+  top: 70%;
+  transform: translateY(-50%);
+
+  height: 50vh;                 /* 70% of viewport height */
+  width: 48px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-left: none;
+  border-radius: 12px 0 0 12px;
+
+  z-index: 9999;
+}
+
+.social-vertical a {
+  font-size: 28px;
+  color: #444;
+  transition: all 0.3s ease;
+}
+
+/* Hover brand colors */
+.social-vertical a:hover {
+  transform: scale(1.2);
+}
+
+.social-vertical a:hover .fa-whatsapp {
+  color: #25D366;
+}
+
+.social-vertical a:hover .fa-facebook-f {
+  color: #1877F2;
+}
+
+.social-vertical a:hover .fa-instagram {
+  color: #E4405F;
+}
+
+.social-vertical a:hover .fa-youtube {
+  color: #FF0000;
+}
+
+
 
 
 .top-bar{
 
   background-color: rgb(6, 59, 59);
   color: #ffffff;
-  height: auto;
+  height: 50px;
   padding: 10px 20px;
   
   display: flex;
@@ -357,7 +408,7 @@ a:focus {
 
 /* about section */
 .animate-img {
-  animation: slowInOut 6s ease-in-out infinite;
+  animation: slowInOut 4s ease-in-out infinite;
 }
 .about-title {
   font-size: 38px;

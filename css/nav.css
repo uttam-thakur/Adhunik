@@ -8,7 +8,7 @@
 .top-bar {
   background-color: rgb(6, 59, 59);
   color: #ffffff;
-  height: auto;
+  height: 50px;
   padding: 10px 20px;
   
   display: flex;
