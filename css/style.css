@@ -1,4 +1,6 @@
 * {
+   margin: 0;
+  padding: 0;
   max-width: 100% !important;
   box-sizing: border-box;
       /* overflow-x: hidden !important; */
@@ -152,7 +154,9 @@ body {
 
   background-color: rgb(6, 59, 59);
   color: #ffffff;
-  height: 50px;
+  /* height: 50px; */
+  height: auto;
+
   padding: 10px 20px;
   
   display: flex;
@@ -707,6 +711,14 @@ a:focus {
 /* end footer section*/
 
 @media (max-width: 768px) {
+
+    .top-bar {
+    flex-direction: column;
+    text-align: center;
+    gap: 8px;
+    padding: 12px 10px;
+  }
+
   .hero_detail-box {
     margin-left: 0;
   }
