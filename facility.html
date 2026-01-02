@@ -61,7 +61,7 @@
 
 <!-- FACILITIES SECTION -->
 <section class="facilities_section layout_padding"  >
-<div class="container">
+  <div class="container">
 <h2 class="main-heading">Our Facilities</h2>
 <p class="text-center">We provide a nurturing environment filled with modern learning tools and creative activities.</p>
 
@@ -127,7 +127,8 @@ data-images="images/playground.webp,images/playground1.jpg,images/playground2.jp
 </div>
 </section>
 <!-- POPUP MODAL -->
-<div id="facilityModal" class="facility-modal">
+
+<div id="facilityModal" class="facility-modal" hidden>
   <div class="modal-content">
 
     <span class="close-btn">&times;</span>
@@ -233,13 +234,10 @@ data-images="images/playground.webp,images/playground1.jpg,images/playground2.jp
 
   <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
   <script type="text/javascript" src="js/bootstrap.js"></script>
-  <!-- progreesbar script -->
-
   </script>
-  
-  
+<script>
+document.addEventListener("DOMContentLoaded", function () {
 
-  <script>
   const cards = document.querySelectorAll(".facility-card");
   const modal = document.getElementById("facilityModal");
 
@@ -255,37 +253,45 @@ data-images="images/playground.webp,images/playground1.jpg,images/playground2.jp
   let currentIndex = 0;
 
   cards.forEach(card => {
-    card.addEventListener("click", () => {
+    card.addEventListener("click", function () {
 
-      images = card.getAttribute("data-images").split(",");
+      const imageData = card.getAttribute("data-images");
+      if (!imageData) return;
+
+      images = imageData.split(",");
       currentIndex = 0;
 
       modalTitle.innerText = card.querySelector("h3").innerText;
       modalText.innerText = card.getAttribute("data-text");
       modalImage.src = images[currentIndex];
 
+      modal.removeAttribute("hidden");
       modal.style.display = "flex";
     });
   });
 
-  prevBtn.addEventListener("click", () => {
+  prevBtn.onclick = () => {
     currentIndex = (currentIndex - 1 + images.length) % images.length;
     modalImage.src = images[currentIndex];
-  });
+  };
 
-  nextBtn.addEventListener("click", () => {
+  nextBtn.onclick = () => {
     currentIndex = (currentIndex + 1) % images.length;
     modalImage.src = images[currentIndex];
-  });
+  };
 
-  closeBtn.addEventListener("click", () => {
+  closeBtn.onclick = closeModal;
+  modal.onclick = e => e.target === modal && closeModal();
+
+  function closeModal() {
+    modal.setAttribute("hidden", true);
     modal.style.display = "none";
-  });
+  }
 
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) modal.style.display = "none";
-  });
+});
 </script>
+
+
 
 </body>
 

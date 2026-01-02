@@ -40,13 +40,11 @@ body {
     overflow-x: hidden;
 
 }
-
-/* Modal box */
 .modal-content {
   background: #fff;
     overflow-x: hidden;
 
-  width: 50%;
+  width: 95%;
   /* max-width: 600px;   desktop size */
   /* max-height: 50%; */
   border-radius: 12px;
@@ -54,6 +52,7 @@ body {
   position: relative;
   overflow-y: auto;
 }
+
 .modal-slider {
   width: 100%;
 
