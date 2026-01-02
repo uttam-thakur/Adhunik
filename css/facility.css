@@ -1,3 +1,14 @@
+html {
+  width: 100%;
+  overflow-x: hidden !important;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden !important;
+  position: relative;
+}
+
 .facility-card {
   background: #fff;
   border-radius: 18px;
@@ -26,7 +37,7 @@
 .facility-content h4 {
   font-size: 18px;
   font-weight: 600;
-  color: #6a1b9a; /* kids-friendly purple */
+  color: #6a1b9a; 
   margin-bottom: 10px;
 }
 
@@ -36,6 +47,10 @@
   line-height: 1.6;
 }
 
+.facility-modal {
+    display: none !important;
+
+}
 
 
 
@@ -48,7 +63,7 @@
   }
 
   .facility-card img {
-    height: 200px;   /* reduce image height */
+    height: 200px;   
   }
 
   .facility-content {
